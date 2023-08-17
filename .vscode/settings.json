@@ -1,0 +1,4 @@
+{
+  "cSpell.words": ["abouturl", "iframe", "Routable"],
+  "rust-analyzer.linkedProjects": ["./Cargo.toml", "./Cargo.toml"]
+}

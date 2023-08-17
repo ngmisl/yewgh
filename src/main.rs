@@ -22,9 +22,42 @@ enum Route {
     NotFound,
 }
 
+fn about() -> String {
+    let abouturl = "/yew-template-for-github-io/about";
+    return abouturl.to_string();
+}
+
+fn test() -> Html {
+    let bla = html! {<><p class="text-4xl">{ "Cantoverse. " }</p>
+    </>};
+    return bla;
+}
+
+fn game() -> Html {
+    let play = html! {
+        <>
+        <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+        <div class="flex justify-center items-center h-screen">
+          <iframe
+            src="https://gateway.lighthouse.storage/ipfs/QmVEfSLJcGWussZ3ertnCNA9rYLDt47Yg7DoA4cL4eVnri/"
+            width="1100"
+            height="700"></iframe>
+        </div>
+      </div>
+      </>
+    };
+    return play;
+}
+
 fn root_route(routes: &RootRoute) -> Html {
     match routes {
-        RootRoute::Home => html! { <p class="text-4xl">{ "Yew Template. " }</p> },
+        RootRoute::Home => {
+            html! { <>
+                <div class="grid place-items-center">{test()}</div>
+                <div>{game()}</div>
+
+            </>}
+        }
         RootRoute::Route => html! {
             <Switch<Route> render={Switch::render(switch)} />
         },
