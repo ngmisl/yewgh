@@ -27,10 +27,10 @@ fn about() -> String {
     return abouturl.to_string();
 }
 
-fn test() -> Html {
-    let bla = html! {<><p class="text-4xl">{ "Cantoverse. " }</p>
+fn head() -> Html {
+    let header = html! {<><p class="text-4xl">{ "Cantoverse. " }</p>
     </>};
-    return bla;
+    return header;
 }
 
 fn game() -> Html {
@@ -53,7 +53,7 @@ fn root_route(routes: &RootRoute) -> Html {
     match routes {
         RootRoute::Home => {
             html! { <>
-                <div class="grid place-items-center">{test()}</div>
+                <div class="grid place-items-center">{head()}</div>
                 <div>{game()}</div>
 
             </>}
