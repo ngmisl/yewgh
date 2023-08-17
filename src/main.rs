@@ -27,8 +27,13 @@ fn about() -> String {
     return abouturl.to_string();
 }
 
+fn headerlinks() -> String {
+    let homelink: &str = "/yew-template-for-github-io/";
+    return homelink.to_string();
+}
+
 fn head() -> Html {
-    let header = html! {<><p class="text-4xl">{ "Cantoverse. " }</p>
+    let header = html! {<><p class="container flex flex-col items-center text-4xl"><a href={headerlinks()}> { "Home" }</a></p>
     </>};
     return header;
 }
@@ -53,7 +58,7 @@ fn root_route(routes: &RootRoute) -> Html {
     match routes {
         RootRoute::Home => {
             html! { <>
-                <div class="grid place-items-center">{head()}</div>
+                <div>{head()}</div>
                 <div>{game()}</div>
 
             </>}
