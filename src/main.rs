@@ -23,13 +23,11 @@ enum Route {
 }
 
 fn about() -> String {
-    let abouturl = "/yew-template-for-github-io/about";
-    return abouturl.to_string();
+    "/yew-template-for-github-io/about".to_string()
 }
 
 fn headerlinks() -> String {
-    let homelink: &str = "/yew-template-for-github-io/";
-    return homelink.to_string();
+    "/yew-template-for-github-io/".to_string()
 }
 
 fn head() -> Html {
