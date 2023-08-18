@@ -7,27 +7,27 @@ use yew_router::prelude::*;
 
 #[derive(Clone, Routable, PartialEq)]
 enum RootRoute {
-    #[at("/yew-template-for-github-io/")]
+    #[at("/")]
     Home,
-    #[at("/yew-template-for-github-io/:s")]
+    #[at("/:s")]
     Route,
 }
 
 #[derive(Clone, Routable, PartialEq)]
 enum Route {
-    #[at("/yew-template-for-github-io/about")]
+    #[at("/about")]
     About,
     #[not_found]
-    #[at("/yew-template-for-github-io/404")]
+    #[at("/404")]
     NotFound,
 }
 
 fn about() -> String {
-    "/yew-template-for-github-io/about".to_string()
+    "/about".to_string()
 }
 
 fn headerlinks() -> String {
-    "/yew-template-for-github-io/".to_string()
+    "/".to_string()
 }
 
 fn head() -> Html {
